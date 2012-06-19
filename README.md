@@ -68,7 +68,6 @@ To test it locally:
 
 To localize the sample boundary sets, etc. edit these two files:
 
-* Go through the `@todo` in `finder.js`
 * Edit `EXAMPLE_*` in `settings_override.py`
 
 # Deployment

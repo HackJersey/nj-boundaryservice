@@ -20,8 +20,26 @@ EXAMPLE_BOUNDARY_CODE = 'example-boundary'
 EXAMPLE_BOUNDARY_RESPONSE = '' # an example JSON response
 EXAMPLE_PLACE = 'Example Place'
 EXAMPLE_PLACE_LAT_LNG = '32.349549,-95.301829'
+# The first pair of coordinates is the latitude and longitude of the southwest
+# corner of the bounding box. The second pair is for the northeast corner.
+EXAMPLE_PLACE_BBOX = '32.1342,-95.6219,32.6871, -94.9844'
 EXAMPLE_UNIT = 'kilometre'
 EXAMPLE_UNIT_CODE = 'km'
+
+# You can replace the initial paragraphs on the about page with your own content
+# by setting this variable.
+# ABOUT_HTML = 'My content'
+
+# You can add a footer to the main page by setting this variable.
+# FOOTER_HTML = 'My footer'
+
+# You can add a link to your source code on the source page by setting both of
+# the following variables:
+# FORKED_REPO = 'The name of my repository'
+# FORKED_REPO_URL = 'The URL at which to find my repository'
+
+# Add Google Analytics by setting this variable:
+# GOOGLE_ANALYTICS_KEY = 'UA-XXXXX-X'
 
 COMPRESS_ENABLED = False 
 
