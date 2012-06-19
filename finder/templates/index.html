@@ -68,7 +68,7 @@ var finder_settings = {{ json_settings|safe }};
 <script src="{{ STATIC_URL }}js/finder.js"></script>
 {% endcompress %}
 
-{% if settings.ENABLE_GOOGLE_ANALYTICS and settings.GOOGLE_ANALYTICS_KEY %}
+{% if settings.GOOGLE_ANALYTICS_KEY %}
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '{{ settings.GOOGLE_ANALYTICS_KEY }}']);
