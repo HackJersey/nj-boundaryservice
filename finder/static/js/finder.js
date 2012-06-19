@@ -1,30 +1,40 @@
-var finder_settings = finder_settings || {};
+var finder_settings = finder_settings || {},
+    finder_setting,
+    southwest_limit,
+    northeast_limit,
+    default_lat,
+    default_lon,
+    place;
+
+if (typeof finder_settings.EXAMPLE_PLACE_BBOX !== 'undefined') {
+    finder_setting = finder_settings.EXAMPLE_PLACE_BBOX.split(',');
+    southwest_limit = new L.LatLng(parseFloat(finder_setting[0]), parseFloat(finder_setting[1]));
+    northeast_limit = new L.LatLng(parseFloat(finder_setting[2]), parseFloat(finder_setting[3]));
+}
+else {
+    southwest_limit = new L.LatLng(32.1342, -95.6219);
+    northeast_limit = new L.LatLng(32.6871, -94.9844);
+}
+if (typeof finder_settings.EXAMPLE_PLACE_LAT_LNG !== 'undefined') {
+    finder_setting = finder_settings.EXAMPLE_PLACE_LAT_LNG.split(',');
+    default_lat = parseFloat(finder_setting[0]);
+    default_lon = parseFloat(finder_setting[1]);
+}
+else {
+    default_lat = 32.349549;
+    default_lon = -95.301829;
+}
+if (typeof finder_settings.EXAMPLE_PLACE !== 'undefined') {
+    place = finder_settings.EXAMPLE_PLACE;
+}
+else {
+    place = 'Example Place';
+}
+
 var geolocate_supported = true; // until prove false
 var geocoder = new google.maps.Geocoder();
-
-if (typeof finder_settings.EXAMPLE_PLACE_BBOX != 'undefined') {
-    var bounds = finder_settings.EXAMPLE_PLACE_BBOX.split(',');
-    var southwest_limit = new L.LatLng(parseFloat(bounds[0]), parseFloat(bounds[1]));
-    var northeast_limit = new L.LatLng(parseFloat(bounds[2]), parseFloat(bounds[3]));
-}
-else {
-    var southwest_limit = new L.LatLng(32.1342, -95.6219);
-    var northeast_limit = new L.LatLng(32.6871, -94.9844);
-}
 var bounding_box = new L.LatLngBounds(southwest_limit, northeast_limit);
 var outside = false; // until prove true
-
-if (typeof finder_settings.EXAMPLE_PLACE_LAT_LNG != 'undefined') {
-    var default_latlon = finder_settings.EXAMPLE_PLACE_LAT_LNG.split(',');
-    var default_lat = parseFloat(default_latlon[0]);
-    var default_lon = parseFloat(default_latlon[1]);
-}
-else {
-    var default_lat = 32.349549;
-    var default_lon = -95.301829;
-}
-
-var place = (typeof finder_settings.EXAMPLE_PLACE != 'undefined') ? finder_settings.EXAMPLE_PLACE : 'Example Place';
 
 var map = null;
 
@@ -124,7 +134,6 @@ function geolocation_error() {
     use_default_location();
 
     $('#resultinfo').html("Your browser does not support automatically determining your location so we're showing you" + place + ".");
-    stop_loading();
 }
 
 function process_location(lat, lng) {
