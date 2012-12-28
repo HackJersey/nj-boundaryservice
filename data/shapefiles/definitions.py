@@ -46,17 +46,17 @@ SHAPEFILES = {
         'encoding': '',
         'srid': ''
     },
-    'Congressional Districts': {
+    '112th Congressional Districts': {
         'file': 'tl_2012_us_cd112/tl_2012_us_cd112.shp',
-        'singular': 'Congressional District',
+        'singular': '112th Congressional District',
         'kind_first': True,
         'ider': utils.simple_namer(['CD112FP']),
         'namer': utils.simple_namer(['NAMELSAD']),
         'authority': 'U.S. Census Bureau',
         'domain': 'United States',
-        'last_updated': date(2012, 12, 27),
+        'last_updated': date(2012, 12, 28),
         'href': 'http://www.census.gov/geo/maps-data/data/tiger-line.html',
-        'notes': '',
+        'notes': 'This is the shape of all of the districts for the U.S. House of Representatives for the 112th Congress, which ran from Jan. 2011 to Jan. 2013. These are the last boundaries of the districts that were determined by the 2000 Census and will change with the 113th Congress, based on the 2010 Census apportionment.',
         'encoding': '',
         'srid': ''
     },
@@ -129,5 +129,47 @@ SHAPEFILES = {
         'notes': '',
         'encoding': '',
         'srid': ''
-    }
+    },
+    'New Congressional Districts (unofficial)': {
+        'file': 'CongDist/CongDist_2012.shp',
+        'singular': 'New Congressional district',
+        'kind_first': True,
+        'ider': utils.simple_namer(['ID']),
+        'namer': utils.simple_namer(['DISTRICT']),
+        'authority': 'NJ Geographic Information Network',
+        'domain': 'New Jersey',
+        'last_updated': date(2012, 12, 28),
+        'href': 'https://njgin.state.nj.us/NJ_NJGINExplorer/jviewer.jsp?pg=DataDownloads',
+        'notes': 'This is the unofficial version of the new Congressional District shapes, based on the 2010 Census. The official version will be released by the U.S. Census Bureau sometime in 2013.',
+        'encoding': '',
+        'srid': ''
+    },
+    '2010 Census tracts': {
+        'file': 'tl_2010_34_tract10/tl_2010_34_tract10.shp',
+        'singular': '2010 Census tract',
+        'kind_first': True,
+        'ider': utils.simple_namer(['GEOID10']),
+        'namer': utils.simple_namer(['NAME10']),
+        'authority': 'U.S. Census Bureau',
+        'domain': 'New Jersey',
+        'last_updated': date(2012, 12, 28),
+        'href': 'http://www.census.gov/geo/maps-data/data/tiger-line.html',
+        'notes': '',
+        'encoding': '',
+        'srid': ''
+    },
+    '2000 Census tracts': {
+        'file': 'tl_2010_34_tract00/tl_2010_34_tract00.shp',
+        'singular': '2000 Census tract',
+        'kind_first': True,
+        'ider': utils.simple_namer(['CTIDFP00']),
+        'namer': utils.simple_namer(['NAME00']),
+        'authority': 'U.S. Census Bureau',
+        'domain': 'New Jersey',
+        'last_updated': date(2012, 12, 28),
+        'href': 'http://www.census.gov/geo/maps-data/data/tiger-line.html',
+        'notes': '',
+        'encoding': '',
+        'srid': ''
+    }        
 }

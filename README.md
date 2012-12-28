@@ -2,7 +2,7 @@ The Newsapps Boundary Service is a ready-to-deploy system for aggregating region
 
 This project allows you to easily create sites like [NJ Boundaries](http://boundary.hackjersey.com/), [NY Boundary](http://nyboundary.org/), [You are here.](http://boundaries.tribapps.com/) and [Smith County Boundaries](http://boundaryservice.hacktyler.com/).
 
-For all the info you need on setting it up, read the [installation readme](installREADME.md).
+For all the info you need on setting it up, read the [installation readme](https://github.com/HackJersey/nj-boundaryservice/blob/master/installREADME.md).
 
 This installation was set up--and shapefiles and definitions added--in preparation for the inaugural [Hack Jersey](http://www.hackjersey.com/) hackathon in January, 2013.
 
