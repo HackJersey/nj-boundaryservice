@@ -153,15 +153,9 @@ LOGGING = {
     }
 }
 
-COMPRESS_ENABLED = False 
+COMPRESS_ENABLED = True 
 
 COMPRESS_ROOT = STATIC_ROOT
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
-}
 
 try:
     LOCAL_SETTINGS
